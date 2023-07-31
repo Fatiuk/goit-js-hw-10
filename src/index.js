@@ -19,7 +19,7 @@ const loader = new Loader({
 // Fetch cat breeds and initialize SlimSelect for breed selection
 catApiServiceInstance
   .fetchBreeds()
-  .then(data => {
+  .then(({ data }) => {
     createOptionMarkup(data);
     new SlimSelect({
       select: refs.select,
@@ -30,7 +30,6 @@ catApiServiceInstance
     Notiflix.Notify.failure(data.message);
   });
 
-refs.select.value = 111;
 // Function which created makup options from <select>
 function createOptionMarkup(data) {
   const optionsMarkup = data
@@ -50,7 +49,7 @@ function handleCatByBreed(event) {
 
   catApiServiceInstance
     .fetchCatByBreed(selectedBreed)
-    .then(data => {
+    .then(({ data }) => {
       loader.hide();
       // Destructuring the data object
       const { breeds, url } = data[0];

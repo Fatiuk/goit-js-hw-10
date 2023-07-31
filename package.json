@@ -2,10 +2,10 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://Fatiukg/goit-js-hw-10",
+  "homepage": "https://Fatiuk.github.io/goit-js-hw-10-test",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /goit-js-hw-10/"
+    "build": "parcel build src/*.html --public-url /goit-js-hw-10-test/"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,6 @@
   },
   "dependencies": {
     "axios": "^1.4.0",
-    "handlebars": "^4.7.7",
     "modern-normalize": "^1.1.0",
     "notiflix": "^3.2.6",
     "slim-select": "^2.6.0"
